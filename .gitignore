@@ -1,0 +1,31 @@
+# Скомпилированные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Кэш и отчёты Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Настройки IDE (редакторов кода)
+.vscode/
+.idea/
+
+# Результаты и отчёты Allure
+allure-results/
+allure-report/
+
+# Файл с секретными данными (переменные окружения)
+.env
+
+# Системные файлы macOS и Windows
+.DS_Store
+Thumbs.db

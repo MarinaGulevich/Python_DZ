@@ -10,4 +10,4 @@ def fizz_buzz(n):
             print(i)
 
 
-print(fizz_buzz(17))
+fizz_buzz(int(input("Введите число: ")))

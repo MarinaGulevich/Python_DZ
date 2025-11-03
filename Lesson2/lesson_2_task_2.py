@@ -1,8 +1,5 @@
-from Python_HWk.Lesson2.lesson_2_task_1 import result
-
-
-def is_year_leap(number):
-    return True if number % 4 == 0 else False
+def is_year_leap(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 
 num = int(input("Ввeдите год:"))

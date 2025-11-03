@@ -10,4 +10,6 @@ def month_to_season(month):
         return "Осень"
     else:
         raise ValueError("Номер месяца должен быть от1 до 12")
+
+
 print(month_to_season(6))

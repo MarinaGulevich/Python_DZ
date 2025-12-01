@@ -17,7 +17,6 @@ ENV/
 
 # Настройки IDE (редакторов кода)
 .vscode/
-.idea/
 
 # Результаты и отчёты Allure
 allure-results/

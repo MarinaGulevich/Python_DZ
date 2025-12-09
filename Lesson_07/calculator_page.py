@@ -6,9 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-webdriver.Chrome()
-
-
 class CalculatorPage:
 
     def __init__(self, driver):

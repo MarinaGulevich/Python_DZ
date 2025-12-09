@@ -52,5 +52,3 @@ class TestShop:
         expected_total = 58.29
         assert total == expected_total, \
             f" Expected total ${expected_total}, but got ${total} "
-
-        driver.quit()

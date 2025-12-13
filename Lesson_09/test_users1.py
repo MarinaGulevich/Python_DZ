@@ -1,5 +1,6 @@
 import pytest
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, select, insert, update, delete
+from sqlalchemy import (create_engine, MetaData, Table, Column,
+                        Integer, String, select, insert, update, delete)
 from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = "sqlite:///test_users.db"
@@ -126,5 +127,6 @@ def test_select_users(session):
 
     # Очистка
     for data in test_data:
-        session.execute(delete(users).where(users.c.user_id == data["user_id"]))
+        session.execute(delete(users).where(
+            users.c.user_id == data["user_id"]))
     session.commit()

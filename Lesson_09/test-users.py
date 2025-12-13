@@ -1,5 +1,6 @@
 import pytest
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, select, insert, update, delete
+from sqlalchemy import (create_engine, MetaData, Table, Column, Integer,
+                        String, select, insert, update, delete)
 from sqlalchemy.orm import sessionmaker
 
 # Подключение к базе данных через SQLAlchemy с использованием psycopg2-binary
@@ -29,7 +30,8 @@ def session():
 
 def test_add_user(session):
     # Добавление нового пользователя
-    ins = insert(users).values(user_id=9999, subject_id=101, user_email="test_add@example.com")
+    ins = insert(users).values(user_id=9999, subject_id=101,
+                               user_email="test_add@example.com")
     session.execute(ins)
     session.commit()
 
@@ -47,12 +49,14 @@ def test_add_user(session):
 
 def test_update_user_email(session):
     # Вставляем пользователя для обновления
-    ins = insert(users).values(user_id=8888, subject_id=102, user_email="old_email@example.com")
+    ins = insert(users).values(user_id=8888, subject_id=102,
+                               user_email="old_email@example.com")
     session.execute(ins)
     session.commit()
 
     # Обновляем email пользователя
-    upd = update(users).where(users.c.user_id == 8888).values(user_email="new_email@example.com")
+    upd = update(users).where(users.c.user_id == 8888).values(
+        user_email="new_email@example.com")
     session.execute(upd)
     session.commit()
 
@@ -69,7 +73,8 @@ def test_update_user_email(session):
 
 def test_delete_user(session):
     # Добавляем пользователя для удаления
-    ins = insert(users).values(user_id=7777, subject_id=103, user_email="delete_me@example.com")
+    ins = insert(users).values(user_id=7777, subject_id=103,
+                               user_email="delete_me@example.com")
     session.execute(ins)
     session.commit()
 
